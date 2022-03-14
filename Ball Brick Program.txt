@@ -1,0 +1,82 @@
+#include <stdio.h>
+
+int main()
+ 
+{
+
+ char g;
+
+int i, j, m, n, s, k;
+
+ char a[7][7];
+ 
+for(i=0; i<7; i++)
+
+{
+ 
+for(j=0; j<7; j++)
+ 
+{
+ 
+if(i==0&&j<7)
+
+a[i][j] = 'W';
+ 
+else if(j==0&&i<7)
+
+a[i][j] = 'W' ;
+
+ else if(j==6&&i<7)
+
+ a[i][j] ='w';
+
+else if(j==3&i==6)
+ 
+ a[i][j] = '0';
+
+else if(j<7&&i==6)
+ a[i][j] = 'G';
+ 
+else
+
+ a[i][j] ='  ';
+
+ }
+
+ }
+ 
+do
+{
+
+printf("Enter the bricks and size) ;
+
+scanf("%d%d%d", &m, &n, &s);
+
+a[m][n]=s;
+
+ printf("Do you want to continue (Y\N): \n");
+
+Scanf("%c", &k) ;
+scanf("%c",&g);
+
+ }
+while(g== 'y');
+ 
+ for(i=0; i<7; i++)
+ {
+
+for(j=0; j<7; j++)
+{
+ 
+printf("%c",a[i][j]) ;
+
+if(j==6)
+
+printf("\n");
+
+}
+}
+
+return 0;
+ 
+}
